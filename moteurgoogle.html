@@ -6,9 +6,9 @@
     <link rel = "stylesheet" type = "text/css" href= "recherche.css" />
   </head>
   <script src = "https://www.youtube.com/iframe_api" ></script>
-  <body>
+  <body onclick = "captureOneButton()">
 
-    <div class = "test" onclick = "captureLien()"  ></div>
+    <div class = "test"  ></div>
     <div class = "recherche">
       <script>
       compteur = 0;
@@ -23,11 +23,12 @@
     var x = document.getElementsByTagName("a")[2];
 
   })();
-
-
-
+  function captureOneButton() {
+    setTimeout(captureLien(),1000);
+  }
   function captureLien() {
   if (compteur == 1){
+    setTimeout
     fenetre = document.getElementsByTagName("iframe")[0];
     document.body.removeChild(fenetre);
     var x = document.getElementsByTagName("a")[2];
@@ -59,6 +60,7 @@
   compteur = 1;
     }
   }
+
   </script>
 <gcse:searchbox></gcse:searchbox></div>
 <div class = "resultats"><gcse:searchresults></gcse:searchresults></div>
